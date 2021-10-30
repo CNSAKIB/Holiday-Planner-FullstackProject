@@ -5,11 +5,11 @@
 .planner{
     color:rgb(99, 200, 240);
 }
-.btn-regular{
+.btn-logout{
     margin:0 10px ;
     height: 40px;
 }
-.pro-pic{
+.display-img{
     margin:10px 10px;
     width: 40px;
     height: 40px;
@@ -17,4 +17,9 @@
 }
 .naming{
     text-decoration: none;
+}
+.login-options{
+    text-decoration: none;
+    color: black;
+    margin-left: 5px;
 }
