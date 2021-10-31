@@ -1,5 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
+
 import './Banner.css'
 
 const Banner = () => {
@@ -12,9 +14,9 @@ const Banner = () => {
                             to Holiday-Planner<br />
                             Choose your fav plan from our best packages!
                         </h1> <br />
-                        <h4>Guided by our Experties!</h4>
+                        <h4>Guids you towards a better vacation!</h4>
                         <br />
-                        <button className="btn-regular">See more <i className="fas fa-arrow-circle-right"></i></button>
+                        <HashLink to="/home#services" ><button className="btn-regular">See more <i className="fas fa-arrow-circle-right"></i></button></HashLink>
                     </Col>
                 </Row>
             </Container>
