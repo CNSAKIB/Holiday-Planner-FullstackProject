@@ -10,7 +10,7 @@ const Moments = () => {
     return (
         <div id="moments" className="mt-4">
             <h1>Moments</h1>
-            <p>This is some of the moments captured by our happy customers</p>
+            <p>These are some of the moments captured by our happy customers</p>
             <div className="w-75 mx-auto">
                 <Carousel>
                     <Carousel.Item>

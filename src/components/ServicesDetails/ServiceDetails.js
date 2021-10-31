@@ -17,7 +17,7 @@ const ServiceDetails = () => {
     }, [])
 
     // ------------------Order Booking------------------
-    const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         data.status = "Pending";
         // console.log(data)
