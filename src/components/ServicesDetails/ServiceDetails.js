@@ -11,7 +11,7 @@ const ServiceDetails = () => {
     // ---------------Service Details---------------
 
     useEffect(() => {
-        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/${serviceId}`)
+        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [])
@@ -30,7 +30,7 @@ const ServiceDetails = () => {
             .then((result) => {
                 // console.log(result.insertedId);
                 if (result.insertedId) {
-                    alert("Booked Succefully!");
+                    alert("Booked Successfully!");
                     reset();
                 }
 

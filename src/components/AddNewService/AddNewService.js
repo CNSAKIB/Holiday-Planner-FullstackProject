@@ -15,7 +15,7 @@ const AddNewService = () => {
             .then((result) => {
                 // console.log(result.insertedId);
                 if (result.insertedId) {
-                    alert("Inserted Succefully!");
+                    alert("Inserted Successfully!");
                     reset();
                 }
 

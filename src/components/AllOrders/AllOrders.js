@@ -13,7 +13,7 @@ const AllOrders = () => {
         // console.log(id)
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if (proceed) {
-            fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/${id}`, {
+            fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/deleteOrder/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" }
 
@@ -22,7 +22,7 @@ const AllOrders = () => {
                 .then((result) => {
                     // console.log(result);
                     if (result.deletedCount) {
-                        alert("Succfully Cancelled Order");
+                        alert("Successfully Cancelled Order");
                     }
                 });
         }
@@ -31,7 +31,7 @@ const AllOrders = () => {
 
     const handleApprove = (id) => {
         // console.log(id)
-        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/${id}`, {
+        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/approveOrder/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" }
 

@@ -8,7 +8,7 @@ const MyOrders = () => {
     const email = user.email;
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/${email}`)
+        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/orders/${email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [orders]);
@@ -17,7 +17,7 @@ const MyOrders = () => {
         // console.log(id)
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if (proceed) {
-            fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/${id}`, {
+            fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/deleteOrder/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" }
 
@@ -26,7 +26,7 @@ const MyOrders = () => {
                 .then((result) => {
                     // console.log(result);
                     if (result.deletedCount) {
-                        alert("Succfully Cancelled Order");
+                        alert("Successfully Cancelled Order");
                     }
                 });
         }
