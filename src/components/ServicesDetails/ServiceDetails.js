@@ -11,7 +11,7 @@ const ServiceDetails = () => {
     // ---------------Service Details---------------
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, [])
@@ -21,7 +21,7 @@ const ServiceDetails = () => {
     const onSubmit = data => {
         data.status = "Pending";
         // console.log(data)
-        fetch(`http://localhost:5000/addBooking`, {
+        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/addBooking`, {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(data),

@@ -4,7 +4,7 @@ import './AllOrders.css';
 const AllOrders = () => {
     const [allOrders, setAllOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders`)
+        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/orders`)
             .then(res => res.json())
             .then(data => setAllOrders(data));
     }, [allOrders]);
@@ -13,7 +13,7 @@ const AllOrders = () => {
         // console.log(id)
         const proceed = window.confirm("Are you sure, you want to cancel?");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteOrder/${id}`, {
+            fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/${id}`, {
                 method: "DELETE",
                 headers: { "content-type": "application/json" }
 
@@ -31,7 +31,7 @@ const AllOrders = () => {
 
     const handleApprove = (id) => {
         // console.log(id)
-        fetch(`http://localhost:5000/approveOrder/${id}`, {
+        fetch(`https://bloodcurdling-mansion-90066.herokuapp.com/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" }
 
